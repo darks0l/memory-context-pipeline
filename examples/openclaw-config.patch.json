@@ -1,0 +1,29 @@
+{
+  "session": {
+    "threadBindings": {
+      "enabled": true,
+      "ttlHours": 72
+    }
+  },
+  "channels": {
+    "discord": {
+      "threadBindings": {
+        "enabled": true,
+        "ttlHours": 72,
+        "spawnSubagentSessions": true
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "compaction": {
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 10000,
+          "prompt": "Context exceeded 10k tokens. Create compact summary preserving decisions, constraints, active tasks, and open questions. Prefer local sub-agent model alias lfm2 for compression when available.",
+          "systemPrompt": "Enforce context budget. Keep premium context under 10k tokens via aggressive summarization while preserving critical facts and pending actions."
+        }
+      }
+    }
+  }
+}

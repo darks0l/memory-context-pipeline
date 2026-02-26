@@ -1,0 +1,15 @@
+{
+  "summarize_threshold_tokens": 10000,
+  "candidate_min_confidence": 0.72,
+  "local_model": "lfm2",
+  "premium_model": "opus",
+  "max_local_passes": 2,
+  "premium_review_on_flags": true,
+  "fail_mode": "graceful_skip",
+  "local_task_types": [
+    "summarize",
+    "compress",
+    "extract-memory-candidates",
+    "dedupe-notes"
+  ]
+}

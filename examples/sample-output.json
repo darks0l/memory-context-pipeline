@@ -1,0 +1,19 @@
+{
+  "summary_short": "- Meta wants local compression while preserving premium reasoning\n- 10k soft threshold policy enabled\n- Thread-bound subagent spawning enabled",
+  "summary_full": "A local memory worker handles summarization and memory-candidate extraction while premium model remains focused on final reasoning. Context compaction is triggered at 10k soft threshold and Discord thread-bound sessions are configured.",
+  "memory_candidates": [
+    {
+      "text": "Use lfm2 for low-latency local compression",
+      "confidence": 0.93,
+      "why": "Explicit architecture preference"
+    }
+  ],
+  "drop_candidates": [
+    {
+      "text": "Redundant greetings",
+      "why": "Low information value"
+    }
+  ],
+  "risk_flags": [],
+  "needs_premium_review": false
+}
