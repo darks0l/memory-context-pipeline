@@ -5,10 +5,16 @@ Local-model memory/context pipeline that keeps premium reasoning in the main cha
 ## What this gives you
 
 - Premium model stays focused on high-value reasoning
-- Automatic context compaction around a 10k-token soft threshold
+- Automatic context compaction around a 10k-token **soft** threshold
 - Local worker (`lfm2` by default) for summarize/compress/extract tasks
 - Strict JSON output contract for predictable downstream handling
 - Reusable skill package for other OpenClaw users
+
+## Important behavior note
+
+- `10k` is a **soft compaction trigger**, not a hard firewall.
+- The system will flush/compact context around the threshold to keep premium context lean.
+- You can still explicitly request full context when needed.
 
 ## Repo layout
 
@@ -38,7 +44,14 @@ Local-model memory/context pipeline that keeps premium reasoning in the main cha
 - **Default fast path:** `lfm2` (`ollama/lfm2:24b`)
 - **Heavier local path:** `qwen3.5:35b` when your host can handle larger VRAM/RAM demand
 
-If your box can run qwen3.5 comfortably, use it for higher-quality compression passes and keep `lfm2` as low-latency fallback.
+### Hardware guidance (practical)
+
+- **lfm2 (24B):** good for low-latency compression on mid/high-end hosts
+- **qwen3.5 (35B):** use when you have enough VRAM/RAM headroom and can tolerate slower latency
+
+Rule of thumb:
+- If you care most about speed and responsiveness -> `lfm2`
+- If you care most about richer local summaries and can afford compute -> `qwen3.5:35b`
 
 ## Suggested routing policy
 
@@ -52,6 +65,14 @@ If your box can run qwen3.5 comfortably, use it for higher-quality compression p
 
 ```bash
 python skill/scripts/validate_output.py --input examples/sample-output.json
+```
+
+## Windows publishing note
+
+If `gh` is installed but not in PATH, use full path:
+
+```powershell
+& "C:\Program Files\GitHub CLI\gh.exe" auth status
 ```
 
 ## License
