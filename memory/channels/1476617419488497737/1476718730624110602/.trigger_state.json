@@ -1,0 +1,8 @@
+{
+  "lastDigestAt": "2026-02-27T02:18:04.410298+00:00",
+  "lastEstimatedTokens": 12960,
+  "lastReasons": [
+    "threshold:12960>=10000",
+    "digest_initial"
+  ]
+}

@@ -43,3 +43,4 @@ Split workloads by value:
 - Weekly digests for compact recall
 - Triggered writes only (flush events, explicit remember, periodic cadence)
 - No per-message overlogging by default
+- v1.1.1 auto-trigger helper enables threshold-driven automatic writes with state-based throttling

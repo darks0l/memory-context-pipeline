@@ -88,6 +88,8 @@ Recommended write triggers:
 - explicit "remember this"
 - periodic digest cadence
 
+For automation, use `scripts/auto_trigger.py` to decide when to write and throttle repeated writes via per-channel state.
+
 ## Notes
 
 - Favor deterministic routing over hidden heuristics.

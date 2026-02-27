@@ -37,6 +37,18 @@ python skill/scripts/channel_memory_store.py --guild-id <gid> --channel-id <cid>
 
 Use it on compaction events, explicit "remember this" requests, or periodic digest cadence.
 
+## Auto-trigger support (v1.1.1)
+
+Automation helper added:
+
+```bash
+python skill/scripts/auto_trigger.py --guild-id <gid> --channel-id <cid> --chars <char_count>
+```
+
+If `trigger=true`, then run `channel_memory_store.py` to append records.
+
+This preserves original intent: automatic operation when context grows beyond threshold.
+
 ## Quick start
 
 1. Copy/install skill contents from `skill/` into `~/.openclaw/skills/memory-context-pipeline`.
