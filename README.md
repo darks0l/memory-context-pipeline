@@ -49,6 +49,16 @@ If `trigger=true`, then run `channel_memory_store.py` to append records.
 
 This preserves original intent: automatic operation when context grows beyond threshold.
 
+## One-command orchestrator (v1.2.1)
+
+Run full cycle in one command:
+
+```bash
+python skill/scripts/orchestrate_memory_cycle.py --root . --guild-id <gid> --channel-id <cid> --task summarize --chars 25000
+```
+
+This chains: trigger decision -> routing decision -> conditional memory write.
+
 ## Quick start
 
 1. Copy/install skill contents from `skill/` into `~/.openclaw/skills/memory-context-pipeline`.

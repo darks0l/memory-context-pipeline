@@ -44,3 +44,4 @@ python skill/scripts/enforcement_check.py --config C:\\Users\\favcr\\.openclaw\\
 Interpretation:
 - `enforcementMode=soft`: compaction is active but not a strict firewall
 - practical hard behavior is achieved by routing + auto-trigger policies above threshold
+- easiest operations path is `orchestrate_memory_cycle.py` for end-to-end checkpointing
