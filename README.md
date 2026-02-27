@@ -22,6 +22,21 @@ Local-model memory/context pipeline that keeps premium reasoning in the main cha
 - `docs/` - setup, architecture, release notes
 - `examples/` - config + output examples
 
+## Channel organization (v1.1)
+
+Optional lean channel-memory layout is now included:
+
+- `memory/channels/<guild_id>/<channel_id>/YYYY-MM-DD.md`
+- `memory/channels/<guild_id>/<channel_id>/summaries/YYYY-Www.md`
+
+Writer utility:
+
+```bash
+python skill/scripts/channel_memory_store.py --guild-id <gid> --channel-id <cid> --text "..."
+```
+
+Use it on compaction events, explicit "remember this" requests, or periodic digest cadence.
+
 ## Quick start
 
 1. Copy/install skill contents from `skill/` into `~/.openclaw/skills/memory-context-pipeline`.

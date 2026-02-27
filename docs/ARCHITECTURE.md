@@ -35,3 +35,11 @@ Split workloads by value:
 - Portable config and skill package
 - Local-first cost profile
 - Predictable behavior due to deterministic routing
+- Scoped channel-memory folders reduce retrieval noise at scale
+
+## Channel memory organization (v1.1)
+
+- Daily append-only logs per channel
+- Weekly digests for compact recall
+- Triggered writes only (flush events, explicit remember, periodic cadence)
+- No per-message overlogging by default

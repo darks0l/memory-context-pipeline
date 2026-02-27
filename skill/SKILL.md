@@ -77,8 +77,20 @@ Suggested defaults:
 - candidate minimum confidence: 0.72
 - fail mode: `graceful_skip`
 
+## 5) Channel Memory Organization (Optional, v1.1)
+
+Use `scripts/channel_memory_store.py` to maintain lean per-channel logs:
+- `memory/channels/<guild>/<channel>/YYYY-MM-DD.md`
+- `memory/channels/<guild>/<channel>/summaries/YYYY-Www.md`
+
+Recommended write triggers:
+- compaction flush
+- explicit "remember this"
+- periodic digest cadence
+
 ## Notes
 
 - Favor deterministic routing over hidden heuristics.
 - Keep the local worker narrow (compression/extraction), not broad reasoning.
 - Preserve privacy: redact sensitive snippets before storing long-term memory.
+- Avoid per-message overlogging; summarize on meaningful checkpoints.
