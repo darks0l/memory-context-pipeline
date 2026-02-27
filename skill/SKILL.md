@@ -73,8 +73,10 @@ Use `references/pipeline_config.example.json` as baseline defaults.
 Suggested defaults:
 - summarize threshold: 10000 tokens
 - local model: `lfm2`
+- local vision model: `qwen3-vl`
 - premium model: `opus`
-- candidate minimum confidence: 0.72
+- candidate min confidence (text): 0.72
+- candidate min confidence (vision): 0.78
 - fail mode: `graceful_skip`
 
 ## 5) Channel Memory Organization (Optional, v1.1)

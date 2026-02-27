@@ -92,6 +92,8 @@ Rule of thumb:
 
 ```bash
 python skill/scripts/validate_output.py --input examples/sample-output.json
+python skill/scripts/validate_vision_tasks.py
+python skill/scripts/enforcement_check.py --config C:\\Users\\favcr\\.openclaw\\openclaw.json
 ```
 
 ## Windows publishing note
