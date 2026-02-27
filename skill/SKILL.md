@@ -35,10 +35,10 @@ python scripts/context_router.py --task summarize --chars 52000
 Use `references/worker_prompt.md` as the sub-agent task prompt.
 
 Recommended spawn model aliases:
-- `lfm2` (fast local)
-- `qwen` (higher local depth when needed)
+- `lfm2` (fast local, text-heavy compaction)
+- `qwen3-vl` (vision-aware extraction/captioning when inputs include images)
 
-Use `lfm2` as default if latency matters.
+Use `lfm2` as default if latency matters; route to `qwen3-vl` only for multimodal turns.
 
 ## 3) Output Contract
 

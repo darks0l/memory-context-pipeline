@@ -2,6 +2,7 @@
   "summarize_threshold_tokens": 10000,
   "candidate_min_confidence": 0.72,
   "local_model": "lfm2",
+  "local_vision_model": "qwen3-vl",
   "premium_model": "opus",
   "max_local_passes": 2,
   "premium_review_on_flags": true,
@@ -11,5 +12,10 @@
     "compress",
     "extract-memory-candidates",
     "dedupe-notes"
+  ],
+  "local_vision_task_types": [
+    "image-caption",
+    "screenshot-summary",
+    "ocr-extract"
   ]
 }

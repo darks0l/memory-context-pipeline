@@ -68,17 +68,17 @@ This preserves original intent: automatic operation when context grows beyond th
 
 ## Recommended models
 
-- **Default fast path:** `lfm2` (`ollama/lfm2:24b`)
-- **Heavier local path:** `qwen3.5:35b` when your host can handle larger VRAM/RAM demand
+- **Default fast path (text):** `lfm2` (`ollama/lfm2:latest`)
+- **Vision-aware path (multimodal):** `qwen3-vl` (`ollama/qwen3-vl:latest`)
 
 ### Hardware guidance (practical)
 
-- **lfm2 (24B):** good for low-latency compression on mid/high-end hosts
-- **qwen3.5 (35B):** use when you have enough VRAM/RAM headroom and can tolerate slower latency
+- **lfm2 (24B):** best for low-latency summarize/compress/extract flows
+- **qwen3-vl (8.8B):** best for image+text understanding, OCR-like extraction, and visual context notes
 
 Rule of thumb:
-- If you care most about speed and responsiveness -> `lfm2`
-- If you care most about richer local summaries and can afford compute -> `qwen3.5:35b`
+- If task is text-only and speed matters -> `lfm2`
+- If task includes images/screenshots/docs -> `qwen3-vl:latest`
 
 ## Suggested routing policy
 
