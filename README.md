@@ -1,6 +1,6 @@
 # memory-context-pipeline
 
-![DARKSOL](./assets/darksol-logo.svg)
+![DARKSOL](./assets/darksol-logo.png)
 Built by DARKSOL 🌑
 
 Local-model memory/context pipeline for OpenClaw that keeps premium reasoning on the main chat path while offloading summarization and memory extraction.
@@ -82,3 +82,4 @@ No benchmark numbers are claimed in this repo. Gains depend on your local model 
 - Validation notes: `docs/VALIDATION.md`
 - Release notes: `docs/RELEASE_NOTES_*.md`
 - GitHub: <https://github.com/darks0l/memory-context-pipeline>
+
