@@ -1,4 +1,8 @@
 # memory-context-pipeline
+
+![DARKSOL](./assets/darksol-logo.svg)
+Built by DARKSOL 🌑
+
 Local-model memory/context pipeline for OpenClaw that keeps premium reasoning on the main chat path while offloading summarization and memory extraction.
 
 ![release](https://img.shields.io/badge/release-v1.2.1-informational)
